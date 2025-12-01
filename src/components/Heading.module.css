@@ -1,4 +1,6 @@
 .heading {
-  background: brown;
-  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
 }
