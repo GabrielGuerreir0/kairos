@@ -9,15 +9,15 @@ export type HomeProps = {
   setState: React.Dispatch<React.SetStateAction<TaskStateModel>>;
 };
 
-export function Home(props: HomeProps) {
+export function Home() {
   return (
     <MainTemplate>
       <Container>
-        <ContDown {...props} />
+        <ContDown />
       </Container>
 
       <Container>
-        <MainForm {...props} />
+        <MainForm />
       </Container>
     </MainTemplate>
   );
