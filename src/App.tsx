@@ -22,7 +22,7 @@ export function App() {
   const [state, setState] = useState(intialState);
 
   return (
-    <TaskContext.Provider value={{ outraCoisa: 321 }}>
+    <TaskContext.Provider value={{ outraCoisa: 456 }}>
       <Home />
     </TaskContext.Provider>
   );
