@@ -4,8 +4,20 @@ import { DefaultButton } from "../DefaultButton";
 import { DefaultInput } from "../DefaultInput";
 
 import styles from "./styles.module.css";
+import { useTaskContext } from "../../contexts/TaskContext";
 
 export function MainForm() {
+  const { setState } = useTaskContext();
+
+  function handleClick() {
+    setState((prevState) => {
+      return {
+        ...prevState,
+        formattedSecondsRemaining: "21:00",
+      };
+    });
+  }
+
   return (
     <form className={styles.form} action="">
       <div className={styles.formRow}>
