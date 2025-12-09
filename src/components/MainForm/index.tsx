@@ -4,12 +4,24 @@ import { DefaultButton } from "../DefaultButton";
 import { DefaultInput } from "../DefaultInput";
 
 import styles from "./styles.module.css";
+import { useState } from "react";
 
 export function MainForm() {
+  const [taskName, setTaskName] = useState("");
+
+  function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+  }
   return (
-    <form className={styles.form} action="">
+    <form onSubmit={handleCreateNewTask} className={styles.form} action="">
       <div className={styles.formRow}>
-        <DefaultInput type="text" id="task" labelText="Vou trabalhar em" />
+        <DefaultInput
+          type="text"
+          id="task"
+          labelText="Vou trabalhar em"
+          value={taskName}
+          onChange={(e) => setTaskName(e.target.value)}
+        />
       </div>
 
       <div className={styles.formRow}>
